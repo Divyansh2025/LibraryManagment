@@ -94,6 +94,10 @@ public class BookDAO {
                        "JOIN students s ON bb.student_id = s.id";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
+            if(!resultSet.next()) {
+                System.out.println("No borrowed books found.");
+                return;
+            }
             while (resultSet.next()) {
                 System.out.println("Book: " + resultSet.getString("title") + ", Borrowed by: " + resultSet.getString("username") + ", Date: " + resultSet.getDate("borrow_date"));
             }

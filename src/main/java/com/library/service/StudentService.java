@@ -57,7 +57,7 @@ public class StudentService implements UserService {
     }
 
     // Return a borrowed book
-    public void returnBook(int bookId) throws SQLException {
+    public void returnBook() throws SQLException {
         Student student = studentDAO.getStudentByUsername(this.loggedInUsername);
         if (student != null) {
             List<BorrowedBooks> borrowedBooks = borrowedBooksDAO.getBorrowedBooksByStudent(student.getId());
