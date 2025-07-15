@@ -1,39 +1,16 @@
 package com.library.model;
 
-public class Student {
-    private int id;
-    private String username;
-    private String password;
-
+public class Student extends User {
+    
     // Constructor
     public Student(int id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
+        super(id, username, password);  // Call the parent class constructor
     }
 
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    // Implement the login method for Student
+    @Override
+    public boolean login(String username, String password) {
+        // Logic for student login (for simplicity, assuming it's always valid)
+        return getUsername().equals(username) && getPassword().equals(password);
     }
 }

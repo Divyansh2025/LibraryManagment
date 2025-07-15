@@ -1,39 +1,16 @@
 package com.library.model;
 
-public class Admin {
-    private int id;
-    private String username;
-    private String password;
-
+public class Admin extends User {
+    
     // Constructor
     public Admin(int id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
+        super(id, username, password);  // Call the parent class constructor
     }
 
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    // Implement the login method for Admin
+    @Override
+    public boolean login(String username, String password) {
+        // Logic for admin login
+        return getUsername().equals(username) && getPassword().equals(password);
     }
 }
