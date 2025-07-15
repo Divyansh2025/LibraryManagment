@@ -26,8 +26,8 @@ public class BookDAO {
     public void updateBookStatus(Book book) throws SQLException {
         String query = "UPDATE books SET status = ? WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, book.getStatus());  // 'pending', 'approved', etc.
-            statement.setInt(2, book.getId());  // Book's ID
+            statement.setString(1, book.getStatus());  // Set the new status (e.g., 'pending')
+            statement.setInt(2, book.getId());  // Book ID
             statement.executeUpdate();
         }
     }
