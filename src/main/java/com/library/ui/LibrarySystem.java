@@ -104,7 +104,7 @@ public class LibrarySystem {
                                 studentService.showAllBooks();
                                 break;
                             case 3:
-                                studentService.returnBook();  // Add logic to return book (ensure book ID is passed)
+                                studentService.returnBook();  
                                 break;
                             case 4:
                                 exit = true;

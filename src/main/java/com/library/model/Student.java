@@ -7,10 +7,10 @@ public class Student extends User {
         super(id, username, password);  // Call the parent class constructor
     }
 
-    // Implement the login method for Student
+
     @Override
     public boolean login(String username, String password) {
-        // Logic for student login (for simplicity, assuming it's always valid)
+        
         return getUsername().equals(username) && getPassword().equals(password);
     }
 }

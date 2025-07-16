@@ -33,7 +33,7 @@ public class BorrowedBooksDAO {
             statement.setInt(1, studentId);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                // Ensure the return_date column is fetched from the result set
+               
                 borrowedBooks.add(new BorrowedBooks(resultSet.getInt("id"),
                                                     resultSet.getInt("student_id"),
                                                     resultSet.getInt("book_id"),

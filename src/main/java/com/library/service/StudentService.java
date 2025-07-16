@@ -14,8 +14,8 @@ import com.library.model.Student;
 public class StudentService implements UserService {
     private BookDAO bookDAO = new BookDAO();
     private BookRequestDAO bookRequestDAO = new BookRequestDAO();
-    private BorrowedBooksDAO borrowedBooksDAO = new BorrowedBooksDAO();  // Add BorrowedBooksDAO
-    private StudentDAO studentDAO = new StudentDAO();  // Add StudentDAO
+    private BorrowedBooksDAO borrowedBooksDAO = new BorrowedBooksDAO();  
+    private StudentDAO studentDAO = new StudentDAO();  
 
     private String loggedInUsername;
 

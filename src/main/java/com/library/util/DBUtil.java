@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class DBUtil {
     // Database configuration
     private static final String DB_URL = "jdbc:mysql://localhost:3306/library_db";
-    private static final String DB_USERNAME = "root";  // Change this to your MySQL username
-    private static final String DB_PASSWORD = "div2025";      // Change this to your MySQL password
+    private static final String DB_USERNAME = "root"; 
+    private static final String DB_PASSWORD = "div2025";      
     
     // Static connection instance
     private static Connection connection = null;
@@ -65,21 +65,6 @@ public class DBUtil {
         }
     }
     
-    // Method to test database connection
-    public static boolean testConnection() {
-        try {
-            Connection testConn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            if (testConn != null) {
-                System.out.println("✓ Database connection test successful!");
-                System.out.println("✓ Connected to: " + DB_URL);
-                testConn.close();
-                return true;
-            }
-        } catch (SQLException e) {
-            System.err.println("✗ Database connection test failed!");
-            System.err.println("Error: " + e.getMessage());
-            return false;
-        }
-        return false;
-    }
+
+   
 }

@@ -20,7 +20,7 @@ public class AdminService implements UserService {
         return admin != null && admin.getPassword().equals(password);
     }
 
-    // Override the default showAllBooks if customization is needed
+   
     @Override
     public void showAllBooks() throws SQLException {
         System.out.println("Admin showing all books:");

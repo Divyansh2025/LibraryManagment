@@ -4,7 +4,7 @@ public class Book {
     private int id;
     private String title;
     private String author;
-    private String status; // available, pending, approved, borrowed
+    private String status; // available, pending, borrowed
 
     public Book(int id, String title, String author, String status) {
         this.id = id;

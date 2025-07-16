@@ -37,6 +37,6 @@ public abstract class User {
         this.password = password;
     }
 
-    // Abstract method for login, to be implemented by subclasses
+    
     public abstract boolean login(String username, String password);
 }

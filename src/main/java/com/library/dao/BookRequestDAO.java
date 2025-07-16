@@ -42,22 +42,7 @@ public class BookRequestDAO {
         }
     }
 
-    // Method to get all book requests
-    public List<BookRequest> getAllBookRequests() throws SQLException {
-        List<BookRequest> bookRequests = new ArrayList<>();
-        String query = "SELECT * FROM book_requests";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                bookRequests.add(new BookRequest(resultSet.getInt("id"),
-                                                 resultSet.getInt("student_id"),
-                                                 resultSet.getInt("book_id")));
-            }
-        }
-        return bookRequests;
-    }
 
-    // Method to get pending book requests (books requested by students)
     public List<BookRequest> getPendingBookRequests() throws SQLException {
         List<BookRequest> bookRequests = new ArrayList<>();
         String query = "SELECT br.id, br.student_id, br.book_id, b.title, s.username " +
@@ -136,7 +121,7 @@ public class BookRequestDAO {
                                        resultSet.getInt("book_id"));
             }
         }
-        return null;  // Return null if no request is found with the given ID
+        return null;  
     }
 
 }

@@ -7,7 +7,7 @@ public class Admin extends User {
         super(id, username, password);  // Call the parent class constructor
     }
 
-    // Implement the login method for Admin
+
     @Override
     public boolean login(String username, String password) {
         // Logic for admin login
